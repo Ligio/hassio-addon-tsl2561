@@ -1,0 +1,21 @@
+{
+  "name": "TSL2561 Light Sensor",
+  "version": "1.1",
+  "slug": "tsl2561",
+  "description": "TSL2561 light sensor add-on!",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "ports": {
+    "8783/tcp": 8783
+  },
+  "gpio": "true",
+  "full_access": "true",
+  "devices": [ "/dev/i2c-1:/dev/i2c-1:rw" ],
+  "privileged": [
+	  "NET_ADMIN", "SYS_ADMIN", "SYS_RAWIO", "SYS_TIME", "SYS_NICE", "SYS_RESOURCE", "SYS_PTRACE", "SYS_MODULE", "DAC_READ_SEARCH"
+  ],
+  "apparmor": "false"
+}
